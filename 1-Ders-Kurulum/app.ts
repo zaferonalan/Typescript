@@ -94,22 +94,28 @@
 
 // !Enum
 
-enum Media {
-  Newspaper,
-  Newsletter,
-  Magazine,
-  Book,
-}
+// enum Media {
+//   Newspaper,
+//   Newsletter,
+//   Magazine,
+//   Book,
+// }
 
-console.log(Media[2]);
-console.log(Media.Magazine);
+// console.log(Media[2]);
+// console.log(Media.Magazine);
 
-enum PrintMedia {
-  Newspaper = "NEWSPAPER",
-  Newsletter = "NEWSLETTER",
-  Magazine = "MAGAZİNE",
-  Book = "BOOK",
-}
+// enum PrintMedia {
+//   Newspaper = "NEWSPAPER",
+//   Newsletter = "NEWSLETTER",
+//   Magazine = "MAGAZİNE",
+//   Book = "BOOK",
+// }
 
-console.log(PrintMedia.Newsletter);
-console.log(PrintMedia["Newspaper"]);
+// console.log(PrintMedia.Newsletter);
+// console.log(PrintMedia["Newspaper"]);
+
+// ! Union
+// Hem string hem number hemde boolean değer alabilmemizi sağladı
+let code: string | number | boolean;
+code = 123;
+console.log(code);
