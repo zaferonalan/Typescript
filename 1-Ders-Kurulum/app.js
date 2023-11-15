@@ -68,3 +68,22 @@
 //   jobTitle: "Software Developer",
 // };
 // console.log(person2);
+// !Enum
+var Media;
+(function (Media) {
+    Media[Media["Newspaper"] = 0] = "Newspaper";
+    Media[Media["Newsletter"] = 1] = "Newsletter";
+    Media[Media["Magazine"] = 2] = "Magazine";
+    Media[Media["Book"] = 3] = "Book";
+})(Media || (Media = {}));
+console.log(Media[2]);
+console.log(Media.Magazine);
+var PrintMedia;
+(function (PrintMedia) {
+    PrintMedia["Newspaper"] = "NEWSPAPER";
+    PrintMedia["Newsletter"] = "NEWSLETTER";
+    PrintMedia["Magazine"] = "MAGAZ\u0130NE";
+    PrintMedia["Book"] = "BOOK";
+})(PrintMedia || (PrintMedia = {}));
+console.log(PrintMedia.Newsletter);
+console.log(PrintMedia["Newspaper"]);
