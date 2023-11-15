@@ -1,4 +1,10 @@
 console.log("Typescripte girdik");
-console.log("Merhabalar");
 console.log("Zafer Günay Önalan");
-console.log("ZGÖ");
+var age = 29;
+var firstname = "Zafer Günay";
+var lastname = "Önalan";
+var isUpdated = true;
+var employeeName = "Zafer Günay";
+var employeeDept = "Software Developer";
+var employeeDesc = "".concat(employeeName, " works in the ").concat(employeeDept, " department");
+console.log(employeeDesc);
