@@ -87,6 +87,18 @@
 // console.log(PrintMedia["Newspaper"]);
 // ! Union
 // Hem string hem number hemde boolean değer alabilmemizi sağladı
-var code;
-code = 123;
-console.log(code);
+// let code: string | number | boolean;
+// code = 123;
+// console.log(code);
+// ! Any
+// Any her değeri almasını sağlar
+// let someThing: ant = "Hello";
+// someThing = 1234;
+// someThing = false;
+// someThing = {
+//   firstName: "Zafer Günay",
+//   lastName: "Önalan",
+// };
+// console.log(someThing);
+// let arr: any[] = ["Jhon", 123, true];
+// console.log(arr);
