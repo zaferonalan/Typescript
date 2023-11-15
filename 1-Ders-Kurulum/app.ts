@@ -35,3 +35,21 @@
 
 // let values2: Array<string | number> = [20, "Zafer", 5, "Merve"];
 // console.log(values2[2]);
+
+// ! Tuple
+let Id: number = 1;
+let instructorName: string = "Zafer";
+
+let instructor: [number, string] = [1, "Zafer"]; // ilk değer number ikinci değer string olmak zorunda
+
+let user: [number, string, boolean, number, string];
+user = [1, "Zafer", true, 100, "Admin"];
+
+let employee: [number, string][];
+employee = [
+  [1, "Zafer"],
+  [2, "Merve"],
+  [3, "Zerrin"],
+];
+
+console.log(employee);
