@@ -27,15 +27,44 @@
 // let values2: Array<string | number> = [20, "Zafer", 5, "Merve"];
 // console.log(values2[2]);
 // ! Tuple
-var Id = 1;
-var instructorName = "Zafer";
-var instructor = [1, "Zafer"]; // ilk değer number ikinci değer string olmak zorunda
-var user;
-user = [1, "Zafer", true, 100, "Admin"];
-var employee;
-employee = [
-    [1, "Zafer"],
-    [2, "Merve"],
-    [3, "Zerrin"],
-];
-console.log(employee);
+// let Id: number = 1;
+// let instructorName: string = "Zafer";
+// let instructor: [number, string] = [1, "Zafer"]; // ilk değer number ikinci değer string olmak zorunda
+// let user: [number, string, boolean, number, string];
+// user = [1, "Zafer", true, 100, "Admin"];
+// let employee: [number, string][];
+// employee = [
+//   [1, "Zafer"],
+//   [2, "Merve"],
+//   [3, "Zerrin"],
+// ];
+// console.log(employee);
+// ! Object
+// type person = {
+//   firstname: string;
+//   lastname: string;
+//   age: number;
+//   jobTitle: string;
+// };
+// let instructor: person;
+// instructor = {
+//   firstname: "Zafer Günay",
+//   lastname: "Önalan",
+//   age: 25,
+//   jobTitle: "Software Developer",
+// };
+// console.log(instructor.age);
+// //* 2.yol
+// let person2: {
+//   firstname: string;
+//   lastname: string;
+//   age: number;
+//   jobTitle: string;
+// };
+// person2 = {
+//   firstname: "Zafer Günay",
+//   lastname: "Önalan",
+//   age: 25,
+//   jobTitle: "Software Developer",
+// };
+// console.log(person2);
