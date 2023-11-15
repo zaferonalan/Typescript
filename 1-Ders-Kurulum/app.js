@@ -102,3 +102,11 @@
 // console.log(someThing);
 // let arr: any[] = ["Jhon", 123, true];
 // console.log(arr);
+// ! Void
+// Hiç bir şekilde geriye değer döndürmüyor.
+// function sayHello(): void {
+//   let zafer = "Zafer";
+//   console.log("Hi");
+//   return zafer; // retrun ile değer dönmez
+// }
+// sayHello();
