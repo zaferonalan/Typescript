@@ -110,3 +110,13 @@
 //   return zafer; // retrun ile değer dönmez
 // }
 // sayHello();
+// ! Never
+// Hata mesajı için kullanıyoruz. Hiç bir şey geri dönmüyor.
+// void den farkı : void'de null ve undifined alırken
+// never onları dahi almıyor.
+// function throwError(errorMsg: string): never {
+//   throw new Error(errorMsg);
+// }
+// throwError("Hata");
+// let someThing: void = null;
+// let nothing: never = undefined;
