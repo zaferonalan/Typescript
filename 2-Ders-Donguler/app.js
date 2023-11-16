@@ -66,3 +66,21 @@
 //   console.log(counter);
 //   counter++;
 // } while (counter < 5);
+// ! Function
+// function add(a: number, b: number): number {
+//   return a + b;
+// }
+// let toplam = add(10, 20);
+// console.log(typeof toplam);
+// function bastir(): void {
+//   console.log("zafer");
+//   return 35; Void geriye değer döndürmüyor
+// }
+// let writer = bastir();
+// console.log(writer);
+function birlestir(ad, soyad) {
+    if (soyad === void 0) { soyad = "günay"; }
+    return ad + " " + soyad;
+}
+var degisken = birlestir("zafer", "Önalan");
+console.log(degisken);
