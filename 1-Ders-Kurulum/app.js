@@ -120,3 +120,17 @@
 // throwError("Hata");
 // let someThing: void = null;
 // let nothing: never = undefined;
+// !Assertion
+// Obje işlemlerinde atama yaparken type'ını nerden yada hangisi olması gerektiğini belirtir
+// let code: any = 123;
+// let empCode = <number>code;
+// console.log(typeof code);
+// interface Employee {
+//   name: string;
+//   code: number;
+// }
+// let employee = <Employee>{};
+// console.log(typeof employee);
+// employee.name = "Zafer";
+// employee.code = 1234;
+// console.log(employee);
