@@ -136,14 +136,32 @@
 
 // !Function Overloading
 
-function add(a: number, b: number): number;
-function add(a: string, b: string): string;
+// function add(a: number, b: number): number;
+// function add(a: string, b: string): string;
 
-function add(a: any, b: any): any {
-  return a + b;
+// function add(a: any, b: any): any {
+//   return a + b;
+// }
+
+// let degisken = add("zafer", "günay");
+// let degisken2 = add(5, 6);
+// console.log(degisken);
+// console.log(degisken2);
+
+// ! Rest Parameters
+
+// function topla(a: string, ...numbers: number[]): number {
+//   let total = 0;
+//   numbers.forEach((num) => (total += num));
+//   return total;
+// }
+
+// console.log(topla("zafer", 10, 20, 30));
+
+// ? rest parameters en sonda kullanılır.
+
+function birleştir(message: string, ...names: string[]) {
+  console.log(message + " " + names.join(","));
 }
 
-let degisken = add("zafer", "günay");
-let degisken2 = add(5, 6);
-console.log(degisken);
-console.log(degisken2);
+birleştir("Merhaba", "Zafer", "Merve", "Zerrin");
