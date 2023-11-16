@@ -55,3 +55,14 @@
 // for (let item in arr) {
 //   console.log(item);
 // }
+// ! While
+// let counter = 10;
+// while (counter < 5) {
+//   console.log(counter);
+//   counter++;
+// }
+// ? Do While 'de 1 kere kesin çalışır ondan sonra şarta bakar
+// do {
+//   console.log(counter);
+//   counter++;
+// } while (counter < 5);
