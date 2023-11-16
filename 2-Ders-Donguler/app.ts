@@ -129,7 +129,21 @@
 // }
 
 // ? 2.yol arrow Fucntion
-let carpim = (a: number, b: number): number => a * b;
+// let carpim = (a: number, b: number): number => a * b;
 
-let degisken = carpim(4, 5);
+// let degisken = carpim(4, 5);
+// console.log(degisken);
+
+// !Function Overloading
+
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+
+function add(a: any, b: any): any {
+  return a + b;
+}
+
+let degisken = add("zafer", "günay");
+let degisken2 = add(5, 6);
 console.log(degisken);
+console.log(degisken2);
