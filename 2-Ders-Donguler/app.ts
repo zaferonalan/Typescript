@@ -104,9 +104,32 @@
 // let writer = bastir();
 // console.log(writer);
 
-function birlestir(ad: string, soyad: string = "günay"): string {
-  return ad + " " + soyad;
-}
+// function birlestir(ad: string, soyad: string = "günay"): string {
+//   return ad + " " + soyad;
+// }
 
-let degisken = birlestir("zafer", "Önalan");
+// let degisken = birlestir("zafer", "Önalan");
+// console.log(degisken);
+
+// function carpim(a: number, b: number, c?: number): number {
+// c? olan kısım değer girsemde olur girmesemde
+//   console.log(typeof c);
+//   if (typeof c !== "undefined") {
+//     return a * b * c;
+//   }
+//   return a * b;
+// }
+
+// let writer = carpim(10, 5);
+// console.log(writer);
+
+// ? 1.yol
+// function carpim(a: number, b: number) {
+//   return a * b;
+// }
+
+// ? 2.yol arrow Fucntion
+let carpim = (a: number, b: number): number => a * b;
+
+let degisken = carpim(4, 5);
 console.log(degisken);

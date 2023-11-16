@@ -78,9 +78,26 @@
 // }
 // let writer = bastir();
 // console.log(writer);
-function birlestir(ad, soyad) {
-    if (soyad === void 0) { soyad = "günay"; }
-    return ad + " " + soyad;
-}
-var degisken = birlestir("zafer", "Önalan");
+// function birlestir(ad: string, soyad: string = "günay"): string {
+//   return ad + " " + soyad;
+// }
+// let degisken = birlestir("zafer", "Önalan");
+// console.log(degisken);
+// function carpim(a: number, b: number, c?: number): number {
+// c? olan kısım değer girsemde olur girmesemde
+//   console.log(typeof c);
+//   if (typeof c !== "undefined") {
+//     return a * b * c;
+//   }
+//   return a * b;
+// }
+// let writer = carpim(10, 5);
+// console.log(writer);
+// ? 1.yol
+// function carpim(a: number, b: number) {
+//   return a * b;
+// }
+// ? 2.yol arrow Fucntion
+var carpim = function (a, b) { return a * b; };
+var degisken = carpim(4, 5);
 console.log(degisken);
