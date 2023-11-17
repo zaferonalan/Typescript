@@ -32,37 +32,62 @@
 
 // ! inheritance
 
-class Person {
-  id: number;
-  firstName: string;
-  lastName: string;
+// class Person {
+//   id: number;
+//   firstName: string;
+//   lastName: string;
+
+//   /**
+//    *
+//    */
+//   constructor(_id: number, _firstName: string, _lastName: string) {
+//     this.id = _id;
+//     this.firstName = _firstName;
+//     this.lastName = _lastName;
+//   }
+
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+
+// let personal = new Person(20, "Zafer", "Önalan");
+// console.log(personal);
+// console.log(personal.getFullName());
+
+// class Employee extends Person {
+//   /**
+//    *
+//    */
+//   constructor(id: number, firstName: string, lastName: string) {
+//     super(id, firstName, lastName);
+//   }
+// }
+
+// let employee = new Employee(25, "Merve", "Önalan");
+// console.log(employee.getFullName());
+
+// !Static method
+class Circle {
+  static pi: number = 3.14;
+  pi: number = 3;
 
   /**
    *
    */
-  constructor(_id: number, _firstName: string, _lastName: string) {
-    this.id = _id;
-    this.firstName = _firstName;
-    this.lastName = _lastName;
+  constructor() {
+    this.pi++; // 3'ten 4 oldu
+    Circle.pi++; //3.14'ten 4.14 oldu
   }
 
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-
-let deneme = new Person(20, "Zafer", "Önalan");
-console.log(deneme);
-console.log(deneme.getFullName());
-
-class Employee extends Person {
-  /**
-   *
-   */
-  constructor(id: number, firstName: string, lastName: string) {
-    super(id, firstName, lastName);
+  static hesapla(yaricap: number) {
+    return this.pi * yaricap * yaricap;
   }
 }
 
-let employee = new Employee(25, "Merve", "Önalan");
-console.log(employee.getFullName());
+let objem = new Circle();
+let objem2 = new Circle(); // 2. kere çağırdığımızda statik olan pi artarken diğeri artmıyor
+let objem3 = new Circle();
+
+console.log(objem.pi); // 3
+console.log(Circle.pi); // 3.14
