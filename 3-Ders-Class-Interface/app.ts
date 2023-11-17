@@ -29,3 +29,40 @@
 // ? Private ise erişi hiç bir yerden yok
 
 // ? Readonly = sadece okuma yapar. Yani değeri değiştiremene izin vermez.
+
+// ! inheritance
+
+class Person {
+  id: number;
+  firstName: string;
+  lastName: string;
+
+  /**
+   *
+   */
+  constructor(_id: number, _firstName: string, _lastName: string) {
+    this.id = _id;
+    this.firstName = _firstName;
+    this.lastName = _lastName;
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+let deneme = new Person(20, "Zafer", "Önalan");
+console.log(deneme);
+console.log(deneme.getFullName());
+
+class Employee extends Person {
+  /**
+   *
+   */
+  constructor(id: number, firstName: string, lastName: string) {
+    super(id, firstName, lastName);
+  }
+}
+
+let employee = new Employee(25, "Merve", "Önalan");
+console.log(employee.getFullName());
