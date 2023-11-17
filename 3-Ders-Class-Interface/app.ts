@@ -27,3 +27,5 @@
 // ? Public default olarak geliyor. Her yerden erişimi var.
 // ? Protected ise erişimi sadece oluşturlan classı türetildiği yerde erişimi var.
 // ? Private ise erişi hiç bir yerden yok
+
+// ? Readonly = sadece okuma yapar. Yani değeri değiştiremene izin vermez.
