@@ -68,26 +68,56 @@
 // console.log(employee.getFullName());
 
 // !Static method
-class Circle {
-  static pi: number = 3.14;
-  pi: number = 3;
+// class Circle {
+//   static pi: number = 3.14;
+//   pi: number = 3;
 
-  /**
-   *
-   */
-  constructor() {
-    this.pi++; // 3'ten 4 oldu
-    Circle.pi++; //3.14'ten 4.14 oldu
+//   /**
+//    *
+//    */
+//   constructor() {
+//     this.pi++; // 3'ten 4 oldu
+//     Circle.pi++; //3.14'ten 4.14 oldu
+//   }
+
+//   static hesapla(yaricap: number) {
+//     return this.pi * yaricap * yaricap;
+//   }
+// }
+
+// let objem = new Circle();
+// let objem2 = new Circle(); // 2. kere çağırdığımızda statik olan pi artarken diğeri artmıyor
+// let objem3 = new Circle();
+
+// console.log(objem.pi); // 3
+// console.log(Circle.pi); // 3.14
+
+// ! Abstract Class
+
+abstract class Department {
+  constructor(public name: string) {}
+
+  printName(): void {
+    console.log("Department name: " + this.name);
   }
 
-  static hesapla(yaricap: number) {
-    return this.pi * yaricap * yaricap;
+  abstract printMeeting(): void;
+}
+
+class AccountingDepartment extends Department {
+  constructor() {
+    super("Accounting and Auditing");
+  }
+  printMeeting(): void {
+    console.log("The Accounting Department meets each Monday at 10am.");
+  }
+
+  generateReports(): void {
+    console.log("Generating accounting reports...");
   }
 }
 
-let objem = new Circle();
-let objem2 = new Circle(); // 2. kere çağırdığımızda statik olan pi artarken diğeri artmıyor
-let objem3 = new Circle();
-
-console.log(objem.pi); // 3
-console.log(Circle.pi); // 3.14
+let department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReports();
