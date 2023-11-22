@@ -162,23 +162,42 @@
 // console.log(format("Zafer Önalan", false));
 
 // ! interface Extende etme
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// interface IEmployee extends IPerson {
+//   empNumber: number;
+// }
+
+// interface IWorker extends IPerson {
+//   empDepartment: number;
+// }
+
+// let employee: IEmployee = {
+//   empNumber: 1,
+//   gender: "Male",
+//   name: "Zafer",
+// };
+
+// console.log(employee);
+
+// ! Class'a interface implemente etme
 interface IPerson {
   name: string;
   gender: string;
 }
 
-interface IEmployee extends IPerson {
+class Employee implements IPerson {
+  name: string;
+  gender: string;
   empNumber: number;
+
+  constructor(empNumber: number, gender: string, name: string) {
+    (this.name = name), (this.empNumber = empNumber), (this.gender = gender);
+  }
 }
 
-interface IWorker extends IPerson {
-  empDepartment: number;
-}
-
-let employee: IEmployee = {
-  empNumber: 1,
-  gender: "Male",
-  name: "Zafer",
-};
-
+let employee = new Employee(1, "Male", "Zafer");
 console.log(employee);
