@@ -124,18 +124,39 @@
 
 // !interface
 
-interface Person {
-  firstName: string;
-  lastName: string;
+// interface Person {
+//   readonly firstName: string; // readonly değeri bir kere atadıktan sonra değiştiremiyorum
+//   middleName?: string; // Olabilir olmaya da bilir. Bunun için ? kullanılır.
+//   lastName: string;
+// }
+
+// function getFullName(person: Person) {
+//   if (person.middleName) {
+//     return `${person.firstName} ${person.middleName} ${person.lastName}`;
+//   }
+//   return `${person.firstName} ${person.lastName}`;
+// }
+
+// let person: Person = {
+//   firstName: "Zafer",
+//   middleName: "Günay",
+//   lastName: "Önalan",
+// };
+
+// person.firstName = "Zaferrrrr"; // readonly olduğu için değer değişmedi.
+
+// console.log(getFullName(person));
+
+// ! İnterface function Type
+
+interface StringFormat {
+  (str: string, isUpper: boolean);
 }
 
-function getFullName(person: Person) {
-  return `${person.firstName} ${person.lastName}`;
-}
+let format: StringFormat;
 
-let person = {
-  firstName: "Zafer Günay",
-  lastName: "Önalan",
+format = function (str: string, isUpper: boolean) {
+  return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
 };
 
-console.log(getFullName(person));
+console.log(format("Zafer Önalan", false));

@@ -1,9 +1,6 @@
 // ! Class
-function getFullName(person) {
-    return "".concat(person.firstName, " ").concat(person.lastName);
-}
-var person = {
-    firstName: "Zafer Günay",
-    lastName: "Önalan",
+var format;
+format = function (str, isUpper) {
+    return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
 };
-console.log(getFullName(person));
+console.log(format("Zafer Önalan", false));
