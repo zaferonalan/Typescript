@@ -206,39 +206,89 @@
 
 // ! Type intersection
 
-interface BusinessPartner {
-  name: string;
-  credit: number;
+// interface BusinessPartner {
+//   name: string;
+//   credit: number;
+// }
+
+// interface Identity {
+//   name: string;
+//   id: number;
+// }
+
+// interface Contact {
+//   email: string;
+//   phone: string;
+// }
+
+// type Employee = Identity & Contact;
+
+// let kisim: Employee = {
+//   id: 1,
+//   name: "Zafer Önalan",
+//   email: "asdasdasd@hotmail.com",
+//   phone: "123456",
+// };
+
+// console.log(kisim);
+
+// type Custumer = BusinessPartner & Contact;
+
+// let musterim: Custumer = {
+//   name: "Zafer Önalan",
+//   credit: 123,
+//   email: "asdasd@gmail.com",
+//   phone: "456123",
+// };
+
+// console.log(musterim);
+
+// ! Type Guard
+
+// type tip = number | string;
+
+// function add(a: tip, b: tip) {
+//   if (typeof a === "number" && typeof b === "number") {
+//     return a + b;
+//   }
+
+//   if (typeof a === "string" && typeof b === "string") {
+//     return a.concat(b);
+//   }
+
+//   throw new Error("Lütfen doğru formatta data gönderin");
+// }
+
+// console.log(add(5, 6));
+
+class Customer {
+  isCreditAllowed(): boolean {
+    //...
+    return true;
+  }
 }
 
-interface Identity {
-  name: string;
-  id: number;
+class Supplier {
+  isInShortList(): boolean {
+    //...
+    return true;
+  }
 }
 
-interface Contact {
-  email: string;
-  phone: string;
+type BusinessPartner = Customer | Supplier;
+
+function signContract(partner: BusinessPartner): string {
+  let message: string;
+  if (partner instanceof Customer) {
+    message = partner.isCreditAllowed()
+      ? "Sign a new contract with the customer "
+      : "Credit issue";
+  }
+  if (partner instanceof Supplier) {
+    message = partner.isInShortList()
+      ? "Sign a new contract the Supplier "
+      : "Need to evaluate further";
+  }
+
+  return message;
 }
-
-type Employee = Identity & Contact;
-
-let kisim: Employee = {
-  id: 1,
-  name: "Zafer Önalan",
-  email: "asdasdasd@hotmail.com",
-  phone: "123456",
-};
-
-console.log(kisim);
-
-type Custumer = BusinessPartner & Contact;
-
-let musterim: Custumer = {
-  name: "Zafer Önalan",
-  credit: 123,
-  email: "asdasd@gmail.com",
-  phone: "456123",
-};
-
-console.log(musterim);
