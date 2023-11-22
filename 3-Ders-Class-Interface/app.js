@@ -1,9 +1,15 @@
 // ! Class
-var Employee = /** @class */ (function () {
-    function Employee(empNumber, gender, name) {
-        (this.name = name), (this.empNumber = empNumber), (this.gender = gender);
-    }
-    return Employee;
-}());
-var employee = new Employee(1, "Male", "Zafer");
-console.log(employee);
+var kisim = {
+    id: 1,
+    name: "Zafer Önalan",
+    email: "asdasdasd@hotmail.com",
+    phone: "123456",
+};
+console.log(kisim);
+var musterim = {
+    name: "Zafer Önalan",
+    credit: 123,
+    email: "asdasd@gmail.com",
+    phone: "456123",
+};
+console.log(musterim);

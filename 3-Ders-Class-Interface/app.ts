@@ -184,20 +184,61 @@
 // console.log(employee);
 
 // ! Class'a interface implemente etme
-interface IPerson {
+
+// ? Çok fazla terih edilmiyor interface olayı daha kullanışlı
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// class Employee implements IPerson {
+//   name: string;
+//   gender: string;
+//   empNumber: number;
+
+//   constructor(empNumber: number, gender: string, name: string) {
+//     (this.name = name), (this.empNumber = empNumber), (this.gender = gender);
+//   }
+// }
+
+// let employee = new Employee(1, "Male", "Zafer");
+// console.log(employee);
+
+// ! Type intersection
+
+interface BusinessPartner {
   name: string;
-  gender: string;
+  credit: number;
 }
 
-class Employee implements IPerson {
+interface Identity {
   name: string;
-  gender: string;
-  empNumber: number;
-
-  constructor(empNumber: number, gender: string, name: string) {
-    (this.name = name), (this.empNumber = empNumber), (this.gender = gender);
-  }
+  id: number;
 }
 
-let employee = new Employee(1, "Male", "Zafer");
-console.log(employee);
+interface Contact {
+  email: string;
+  phone: string;
+}
+
+type Employee = Identity & Contact;
+
+let kisim: Employee = {
+  id: 1,
+  name: "Zafer Önalan",
+  email: "asdasdasd@hotmail.com",
+  phone: "123456",
+};
+
+console.log(kisim);
+
+type Custumer = BusinessPartner & Contact;
+
+let musterim: Custumer = {
+  name: "Zafer Önalan",
+  credit: 123,
+  email: "asdasd@gmail.com",
+  phone: "456123",
+};
+
+console.log(musterim);
