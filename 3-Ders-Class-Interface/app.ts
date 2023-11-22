@@ -149,14 +149,36 @@
 
 // ! İnterface function Type
 
-interface StringFormat {
-  (str: string, isUpper: boolean);
+// interface StringFormat {
+//   (str: string, isUpper: boolean);
+// }
+
+// let format: StringFormat;
+
+// format = function (str: string, isUpper: boolean) {
+//   return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+// };
+
+// console.log(format("Zafer Önalan", false));
+
+// ! interface Extende etme
+interface IPerson {
+  name: string;
+  gender: string;
 }
 
-let format: StringFormat;
+interface IEmployee extends IPerson {
+  empNumber: number;
+}
 
-format = function (str: string, isUpper: boolean) {
-  return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+interface IWorker extends IPerson {
+  empDepartment: number;
+}
+
+let employee: IEmployee = {
+  empNumber: 1,
+  gender: "Male",
+  name: "Zafer",
 };
 
-console.log(format("Zafer Önalan", false));
+console.log(employee);
